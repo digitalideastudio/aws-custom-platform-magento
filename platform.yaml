@@ -1,0 +1,44 @@
+---
+metadata:
+  description: MagentoPlatform_Ubuntu
+  framework_name: Magento
+  framework_version: 1.9.x
+  maintainer: "<Serhii Matrunchyk>"
+  operating_system_name: Ubuntu
+  operating_system_version: 16.04
+  programming_language_name: ECMAScript
+  programming_language_version: ECMA-262
+option_settings:
+  -
+    namespace: "aws:autoscaling:updatepolicy:rollingupdate"
+    option_name: RollingUpdateEnabled
+    value: "true"
+  -
+    namespace: "aws:elasticbeanstalk:application"
+    option_name: "Application Healthcheck URL"
+    value: /health-check
+  -
+    namespace: "aws:elasticbeanstalk:environment"
+    option_name: EnvironmentType
+    value: LoadBalanced
+  -
+    namespace: "aws:elasticbeanstalk:environment:process:default"
+    option_name: HealthCheckPath
+    value: /health-check
+  -
+    namespace: "aws:elb:listener:443"
+    option_name: ListenerProtocol
+    value: HTTPS
+  -
+    namespace: "aws:elasticbeanstalk:container:php:phpini"
+    option_name: memory_limit
+    value: 512M
+  -
+    namespace: "aws:elasticbeanstalk:container:php:phpini"
+    option_name: display_errors
+    value: "On"
+provisioner:
+  flavor: ubuntu1604
+  template: template.json
+  type: packer
+version: "1.0"
