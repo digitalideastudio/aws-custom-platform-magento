@@ -2,7 +2,7 @@
 metadata:
   description: MagentoPlatform_Ubuntu
   framework_name: Magento
-  framework_version: 1.9.x
+  framework_version: 1.x.x
   maintainer: "<Serhii Matrunchyk>"
   operating_system_name: Ubuntu
   operating_system_version: 16.04
