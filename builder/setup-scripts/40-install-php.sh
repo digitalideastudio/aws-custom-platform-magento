@@ -11,6 +11,9 @@
 . $BUILDER_DIR/CONFIG
 
 rm -rf /etc/php
+apt-get install -y python-software-properties
+add-apt-repository -y ppa:ondrej/php
+apt-get update -y
 
 apt install -y php7.1 \
   php7.1-bcmath \
