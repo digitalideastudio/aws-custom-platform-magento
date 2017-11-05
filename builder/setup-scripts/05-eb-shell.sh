@@ -25,6 +25,8 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 cd /var/www/html
 ' > /home/ec2-user/.zshrc
 
+bash < <(curl -s -L https://raw.github.com/colinmollenhour/modman/master/modman-installer)
+
 mkdir -p /home/ec2-user/.ssh
 cp /home/ubuntu/.ssh/authorized_keys /home/ec2-user/.ssh
 mkdir /home/ec2-user/.vim

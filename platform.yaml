@@ -37,6 +37,7 @@ option_settings:
     namespace: "aws:elasticbeanstalk:container:php:phpini"
     option_name: display_errors
     value: "On"
+
 provisioner:
   flavor: ubuntu1604
   template: template.json
